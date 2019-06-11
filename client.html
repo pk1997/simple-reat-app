@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form>
+        <input type="text" name="text"><br>
+        <input type="submit" value="Submit" id = "button" onclick=foo()>
+        </form>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script>
+      function foo(){
+        var xhttp = new XMLHttpRequest();
+        
+    xhttp.open("GET", "http://localhost:8080/?text=id", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+      }
+</script>
+    </body>
+</html>
